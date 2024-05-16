@@ -1,0 +1,19 @@
+<h1>Applicants </h1>
+<table class="table table-bordered p-5">
+    <thead class="table-primary">
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact No</th>
+        <th scope="col">Resume</th>
+    </thead>
+    <% applicants.forEach(applier =>{ %>
+        <tr>
+            <td><%= applier.id %> </td>
+            <td><%= applier.name %></td>
+            <td><%= applier.email %></td>
+            <td><%= applier.contact %></td>
+            <td><a href="/<%= applier.resume %>" type="button"  class="btn btn-primary">View</button></td>
+        </tr>
+    <% }) %>
+</table>

@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-between">
+<% jobs.forEach(job => { %>
+    <div class="container-fluid p-3 rounded" id style="width:50%; border: 2px solid rgb(92, 88, 88); margin:10px">
+        <button type="button" class="btn btn-primary mt-2">Actively Hiring <i class="fa-solid fa-chart-line"></i> </button>
+        <h3> <%= job.name %></h3>
+        <p><%= job.type %>  <%= job.designation %></p>
+        <p><i class="fa-solid fa-location-dot"></i> <%= job.location %></p>
+        <p><i class="fa-solid fa-indian-rupee-sign"></i> <%= job.salary %></p>
+        <div>
+            <%job.skills.forEach(skill =>{ %>
+                <button type="button" class="btn btn-info" style="margin:2px"><%= skill %></button>
+            <% }) %>
+        </div>
+        <a href="/jobs/<%= job.id %>"><button type="submit" class="btn btn-primary mt-2">View Details</button></a>
+    </div>
+<% }) %>
+</div>

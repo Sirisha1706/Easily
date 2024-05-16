@@ -1,0 +1,56 @@
+<h1>Update Job</h1>
+<% console.log(job) %>
+<form action="/jobs/<%= job.id %>/update" method="post" class="p-3">
+    <div class="form-group p-2">
+        <label><b>Category</b></label>
+        <select class="form-select" name="type" id="type" >
+            <option>Select job category</option>
+            <option value="Tech" <%= job.type == 'Tech' ? 'selected' :''%>>Tech</option>
+            <option value="Non-Tech" <%= job.type == 'Non-Tech' ? 'selected' :''%>>Non-Tech</option>
+          </select>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Designation</b></label>
+        <select class="form-select" name="designation" value="<%= job.designation %>">
+            <option>Select job Designation</option>
+            <option value="HR" <%= job.designation =='HR' ? 'selected' :''%> > HR</option> 
+            <option value="SDE" <%= job.designation =='SDE' ? 'selected' :''%> >SDE</option>
+            <option value="Angular Developer" <%= job.designation == 'Angular Developer' ? 'selected' :''%>>Angular Developer</option>
+            <option value="Devops" <%= job.designation =='Devops' ? 'selected' :''%>>Devops</option>
+            <option value="MERN Developer" <%= job.designation =='MERN Developer' ? 'selected' :''%>>MERN Developer</option>
+            <option value="Java Developer" <%= job.designation =='Java Developer' ? 'selected' :''%>>Java Developer</option>
+            <option value="Front-End Developer" <%= job.designation =='Front-End Developer' ? 'selected' :''%>>Front-End Developer</option>
+            <option value="Back-End Developer" <%= job.designation =='Back-End Developer' ? 'selected' :''%>>Back-End Developer</option>
+            <option value="Full-Stack Developer" <%= job.designation =='Full-Stack Developer' ? 'selected' :''%>>Full-Stack Developer</option>
+        </select>
+    </div>
+    <div class="form-group p-2">
+        <label for="floatingTextarea2"><b>Location</b></label>
+        <input name="location" type="text" class="form-control" id="location" value="<%= job.location %>"/>
+      </div>
+    <div class="form-group p-2">
+        <label for="name"><b>Company Name</b>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Enter Company Name" value="<%= job.name %>"/></label>
+        <label for="applyby"><b>Apply By</b>
+        <input type="date" name="applyby" class="form-control" id="applyby" value="<%=job.applyby %>"/></label>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Enter Salary</b><input name="salary" type="text" class="form-control" id="salary" placeholder="Salary" value="<%= job.salary %>"/></label>
+        <label><b>Total Positions</b><input name="openings" type="number" class="form-control" id="openings" placeholder="Total no of openings" value="<%= job.openings %>"/></label>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Skills</b></label>
+        <select class="form-select" name="skills" multiple>
+            <option>Select skills required for this job</option>
+            <option value="Angular" <%= job.skills.includes('Angular') ? 'selected' : '' %> >Angular</option>
+            <option value="JS" <%= job.skills.includes('JS') ? 'selected' : '' %> >JS</option>
+            <option value="SQL" <%= job.skills.includes('SQL') ? 'selected' : '' %> >SQL</option>
+            <option value="MongoDB" <%= job.skills.includes('MongoDB') ? 'selected' : '' %> >MongoDB</option>
+            <option value="Express" <%= job.skills.includes('Express') ? 'selected' : '' %> >Express</option>
+            <option value="AWS" <%= job.skills.includes('AWS') ? 'selected' : '' %>>AWS</option>
+            <option value="React" <%= job.skills.includes('React') ? 'selected' : '' %>>React</option>
+            <option value="NodeJS" <%= job.skills.includes('NodeJS') ? 'selected' : '' %>>NodeJS</option>
+          </select>
+  </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

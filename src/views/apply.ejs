@@ -1,0 +1,20 @@
+<h1>Apply for Job</h1>
+<form action="/jobs/:id/apply" method="post" enctype="multipart/form-data">
+    <div class="form-group p-3">
+        <label for="name"><b>Name</b></label>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name" required/>
+    </div>
+    <div class="form-group p-3">
+        <label for="email"><b>Email</b></label>
+        <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your Email" required/>
+    </div>
+    <div class="form-group p-3">
+        <label for="contact"><b>Contact</b></label>
+        <input type="number" name="contact" class="form-control" id="contact" placeholder="Enter Contact Number"/>
+    </div>
+    <div class="form-group p-3">
+        <label for="resume"><b>Resume</b></label>
+        <input type="file" name="resume" class="form-control" id="resume" placeholder="Upload Your Resume"/>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

@@ -1,0 +1,23 @@
+<h1><span style="color:blue"><%=job.designation %></span> oppertunity in <span style="color:rgb(90, 241, 247);"><%=job.location %></span> at <span style="color: rgb(6, 171, 248);"><%=job.name %></span></h1>
+
+<div class="container p-3">
+    <p class="m-2"><% if(locals.user){ %> 
+        <button type="button" class="btn btn-primary">Actively Hiring <i class="fa-solid fa-chart-line"></i> </button>
+        <a href='/jobs/<%= job.id %>/update' style="color: blue;" class="mx-3"><i class="fa-solid fa-pen-to-square fa-lg" ></i></a> 
+        <a href="/delete" style="color: red;"><i class="fa-solid fa-trash fa-lg"></i></a>
+    
+    <% } %></p>
+    
+    <h2><%=job.name %> </h2>
+    <p><%= job.type %>  <%= job.designation %> </p>
+    <p><i class="fa-solid fa-location-dot"></i> <%= job.location %></p>
+    <p><i class="fa-solid fa-indian-rupee-sign"></i> <%= job.salary %></p>
+    <p><i class="fa-solid fa-hourglass-half"></i> Apply By: <%= job.applyby %></p>
+    <p><i class="fa-solid fa-signal"></i> Number of openings: <%= job.openings %></p>
+    <a href="/jobs/<%= job.id %>/applicants"><p><i class="fa-solid fa-users"></i> Applicants: <%= job.applicants.length %></p></a>
+    <p><% job.skills.forEach(skill=>{ %>
+        <button type="button" class="btn btn-info" style="margin:2px"><%= skill %></button>
+    <% }) %></p>
+    <% if(!locals.user){ %> <a href='/apply/<%= job.id %>'><button type="button" class="btn btn-primary" style="margin:2px">Apply Now</button></a> <% } %>
+    <button type="button" class="btn btn-success" style="margin:2px"><%= job.jobposted %></button>
+</div>

@@ -1,0 +1,53 @@
+<h1>Post New Job</h1>
+<form action="/jobs" method="post" class="p-3">
+    <div class="form-group p-2">
+        <label><b>Category</b></label>
+        <select class="form-select" name="type">
+            <option selected>Select job category</option>
+            <option value="Tech">Tech</option>
+            <option value="Non-Tech">Non-Tech</option>
+          </select>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Designation</b></label>
+        <select class="form-select" name="designation">
+            <option selected>Select job Designation</option>
+            <option value="HR">HR</option>
+            <option value="Devops">Devops</option>
+            <option value="MERN Developer">MERN Developer</option>
+            <option value="Java Developer">Java Developer</option>
+            <option value="Front-End Developer">Front-End Developer</option>
+            <option value="Back-End Developer">Back-End Developer</option>
+            <option value="Full-Stack Developer">Full-Stack Developer</option>
+          </select>
+    </div>
+    <div class="form-group p-2">
+        <label for="floatingTextarea2"><b>Location</b></label>
+        <input name="location" type="text" class="form-control" id="location" required/>
+      </div>
+    <div class="form-group p-2">
+        <label for="name"><b>Company Name</b>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Enter Company Name" required/></label>
+        <label for="applyby"><b>Apply By</b>
+        <input type="date" name="applyby" class="form-control" id="applyby" required/></label>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Enter Salary</b><input name="salary" type="text" class="form-control" id="salary" placeholder="Salary" required/></label>
+        <label><b>Total Positions</b><input name="openings" type="number" class="form-control" id="openings" placeholder="Total no of openings" required/></label>
+    </div>
+    <div class="form-group p-2">
+        <label><b>Skills</b></label>
+        <select class="form-select" name="skills" multiple required>
+            <option selected>Select skills required for this job</option>
+            <option value="Angular">Angular</option>
+            <option value="JS">JS</option>
+            <option value="SQL">SQL</option>
+            <option value="MongoDB">MongoDB</option>
+            <option value="Express">Express</option>
+            <option value="AWS">AWS</option>
+            <option value="React">React</option>
+            <option value="NodeJS">NodeJS</option>
+          </select>
+  </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>
