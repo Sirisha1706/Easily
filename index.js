@@ -55,4 +55,4 @@ app.post('/search', appControl.searchJobs);
 app.listen(3200, () => {
   console.log("server is listening on 3200");
 });
-export default app;
+

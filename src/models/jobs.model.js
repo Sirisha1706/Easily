@@ -36,6 +36,42 @@ const jobs =[
         openings: 5,
         jobposted: '10/7/2023 12:43:48 pm',
         applicants: []
+    },
+    {   id: 4,
+        type: 'Tech',
+        designation: 'Cloud', 
+        location: 'Bangalore IND',
+        name:'paypal',
+        salary:'20-26Lpa',  
+        applyby: '2024-01-21',
+        skills:['JS', 'SQL', 'MongoDB', 'AWS', 'kubernities'],
+        openings: 5,
+        jobposted: '10/7/2023 12:43:48 pm',
+        applicants: []
+    },
+    {   id: 5,
+        type: 'Tech',
+        designation: 'Front-end developer', 
+        location: 'Bangalore IND',
+        name:'Juspay',
+        salary:'20-26Lpa',  
+        applyby: '2024-01-21',
+        skills:['React', 'JS', 'Html', 'CSS', 'AWS'],
+        openings: 5,
+        jobposted: '10/7/2023 12:43:48 pm',
+        applicants: []
+    },
+    {   id: 6,
+        type: 'Non-Tech',
+        designation: 'Accountant', 
+        location: 'Bangalore IND',
+        name:'Juspay',
+        salary:'10-16Lpa',  
+        applyby: '2024-01-21',
+        skills:['SAP'],
+        openings: 5,
+        jobposted: '10/7/2023 12:43:48 pm',
+        applicants: []
     }
   ];
 
