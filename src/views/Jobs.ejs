@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-between">
+<div class="d-flex flex-wrap justify-content-between">
 <% jobs.forEach(job => { %>
-    <div class="container-fluid p-3 rounded" id style="width:50%; border: 2px solid rgb(92, 88, 88); margin:10px">
+    <div class="container-fluid p-3 rounded" id style="width:30%; border: 2px solid rgb(92, 88, 88); margin:10px">
         <button type="button" class="btn btn-primary mt-2">Actively Hiring <i class="fa-solid fa-chart-line"></i> </button>
         <h3> <%= job.name %></h3>
         <p><%= job.type %>  <%= job.designation %></p>
